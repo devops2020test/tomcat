@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: devopstesttomcat 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: devopstesttomcat 
+    spec:
+      containers:
+        - name: devopstesttomcat 
+          image: devopstest2020.azurecr.io/devopstesttomcat
+          ports:
+          - containerPort: 80
